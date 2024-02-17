@@ -13,27 +13,28 @@ teclasNum.map((upu)=>{
         if(Display.innerHTML == "0"){
             Display.innerHTML = ""
         }
-        Display.innerHTML += evt.target.innerHTML 
-    })
+        Display.innerHTML += evt.target.innerHTML
+   })
 })
 teclasOp.map((upu)=>{
     upu.addEventListener("click",(evt)=>{
-    if(sinal==false){
-        sinal = true
-        if(Display.innerHTML == "0"){
-            Display.innerHTML = ""
-        }
-        if(evt.target.innerHTML == "X"){
-            Display.innerHTML += "*"
-        }else{
-            Display.innerHTML += evt.target.innerHTML
-        }
-    }
+        if(!sinal){
+            sinal = true
+            if(Display.innerHTML == "0"){
+                Display.innerHTML = ""
 
+            }
+            if(evt.target.innerHTML == "X"){
+                Display.innerHTML += "*"
+            }else{
+                Display.innerHTML += evt.target.innerHTML  
+            }
+        }
+        
     })
+        
 })
 teclaOn.addEventListener("click",(evt)=>{
-    Display.innerHTML = 0
-    sinal = false
+        Display.innerHTML = 0
 })
 
