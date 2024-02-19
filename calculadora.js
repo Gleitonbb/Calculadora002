@@ -5,6 +5,8 @@ const Display = document.querySelector(".display")
 const teclaOn = document.querySelector("#teclaoff")
 const teclaLimpar = document.querySelector("#limpar")
 const teclaIgual = document.querySelector("#resultado")
+const abacalc = document.querySelector(".principalcalc")
+const calculadora = document.querySelector("#calcprinc")
 
 let sinal = false
 let decimal = false
@@ -70,4 +72,7 @@ teclaLimpar.addEventListener("click",(evt)=>{
     if(Display.innerHTML.length > 0){
      Display.innerHTML  = Display.innerHTML.slice(0, -1)
     }
+    })
+    abacalc.addEventListener("click",(evt)=>{
+       calculadora.classList.toggle("calcprinc_exibir")
     })
